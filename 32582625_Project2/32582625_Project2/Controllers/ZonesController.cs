@@ -51,7 +51,6 @@ namespace _32582625_Project2.Controllers
         }
 
         // PUT: api/Zones/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutZone(Guid id, Zone zone)
         {
@@ -82,7 +81,6 @@ namespace _32582625_Project2.Controllers
         }
 
         // POST: api/Zones
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Zone>> PostZone(Zone zone)
         {
@@ -129,6 +127,7 @@ namespace _32582625_Project2.Controllers
 
             return NoContent();
         }
+        
 
         private bool ZoneExists(Guid id)
         {
