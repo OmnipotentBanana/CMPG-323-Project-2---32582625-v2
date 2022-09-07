@@ -118,7 +118,7 @@ namespace _32582625_Project2.Controllers
                 return NotFound();
             }
             var device = await _context.Devices.FindAsync(id);
-            if (device == null)
+            if (!DeviceExists(id))
             {
                 return NotFound();
             }

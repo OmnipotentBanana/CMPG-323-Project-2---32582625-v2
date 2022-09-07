@@ -119,7 +119,7 @@ namespace _32582625_Project2.Controllers
                 return NotFound();
             }
             var category = await _context.Categories.FindAsync(id);
-            if (category == null)
+            if (!CategoryExists(id))
             {
                 return NotFound();
             }

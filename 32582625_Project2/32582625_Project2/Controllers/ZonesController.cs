@@ -117,7 +117,7 @@ namespace _32582625_Project2.Controllers
                 return NotFound();
             }
             var zone = await _context.Zones.FindAsync(id);
-            if (zone == null)
+            if (!ZoneExists(id))
             {
                 return NotFound();
             }
