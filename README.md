@@ -49,7 +49,7 @@ Returns:
 ```
 
 ## Zone id search within Devices
-https://32582625project2.azurewebsites.net/api/Devices/GetDeviceByZoneID/6530ea63-e628-47df-81fd-c5f2a4b92ddb
+https://32582625project2.azurewebsites.net/api/Devices/GetDeviceByZone/6530ea63-e628-47df-81fd-c5f2a4b92ddb
 Returns:
 ```json
 [

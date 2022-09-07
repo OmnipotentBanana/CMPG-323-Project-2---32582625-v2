@@ -151,6 +151,29 @@ namespace _32582625_Project2.Controllers
             return devices; // This is true beauty, seeing the data being successfully retreived. 😭
         }
 
+        // GET: api/GetDeviceByCategory/{Guid}
+        [HttpGet("GetNumberOfZones/{id}")]
+        public async Task<int> GetNumberOfZones(Guid id)
+        {
+            if (_context.Zones == null || _context.Categories == null)
+            {
+                return 0;
+            }
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
+            {
+                return 0;
+            }
+
+            var categories = from z in _context.Zones
+                             join d in _context.Devices on z.ZoneId equals d.ZoneId
+                             join c in _context.Categories on d.CategoryId equals c.CategoryId
+                             where c.CategoryId == d.CategoryId
+                             &&  z.ZoneId == d.ZoneId
+                             select d;
+            return categories.Count(); // im going to cry. this is a million times better than SQL
+        }
+
         private bool CategoryExists(Guid id)
         {
             return (_context.Categories?.Any(e => e.CategoryId == id)).GetValueOrDefault();
