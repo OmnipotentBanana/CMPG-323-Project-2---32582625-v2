@@ -1,6 +1,8 @@
 # CMPG-323-Project-2---32582625-v2
 
 ## *This is my 3rd revision of my Project 2 repository. In the previous 2 repositories, I accidentally forgot to add the debug folders into the .gitignore leading to me leaking my passwords through the commit history. I deleted the first repository in panic and did not read the Rubric. I only followed the project 2 brief and did not see any indication of a requirement of a 7 day old commit. My apologies.*
+
+## *Reference List is uploaded to this repository under **Reference List.txt***
 *Also using .net 6 allowed me to bypass the API configuration of swagger, thus not appearing in the Azure API Management service*
 # How to use this API
 
@@ -45,6 +47,24 @@ Returns:
     "dateCreated": "2022-09-07T10:44:15.263"
  } 
 ```
+
+## Zone id search within Devices
+https://32582625project2.azurewebsites.net/api/Devices/GetDeviceByZoneID/6530ea63-e628-47df-81fd-c5f2a4b92ddb
+Returns:
+```json
+[
+  {
+    "deviceId": "24808084-b1b0-440d-a734-0a7c950e297f",
+    "deviceName": "Amazon Alexa",
+    "categoryId": "065c1253-1cc1-45ac-a5e4-013ab73110da",
+    "zoneId": "6530ea63-e628-47df-81fd-c5f2a4b92ddb",
+    "status": "Monitored",
+    "isActvie": true,
+    "dateCreated": "2022-09-07T11:10:16.637"
+  }
+]
+```
+
 
 ## Delete requests work differently and have to be handeled with Swagger, Postman or any other API tester to send a request body to be formatted correctly with the input parameters.
 ## Swagger can be accessed with this url: https://32582625project2.azurewebsites.net/swagger/ where DELETE, POST and PUT requests can be handeled and tested with ease.
