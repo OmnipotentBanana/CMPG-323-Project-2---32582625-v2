@@ -64,11 +64,11 @@ Returns:
   }
 ]
 ```
-https://32582625project2.azurewebsites.net/api/Categories/GetNumberOfZones/065c1253-1cc1-45ac-a5e4-013ab73110da 
+https://32582625project2.azurewebsites.net/api/Categories/GetNumberOfZones/id?id=065c1253-1cc1-45ac-a5e4-013ab73110da
 Returns:
-
-```json
-  1
+#### There are 2 zones currently using a Smart Home IOT Device
+```json 
+  2
 ```
 
 ## Delete requests work differently and have to be handeled with Swagger, Postman or any other API tester to send a request body to be formatted correctly with the input parameters.
