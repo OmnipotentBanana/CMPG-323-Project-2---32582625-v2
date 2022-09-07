@@ -151,27 +151,28 @@ namespace _32582625_Project2.Controllers
             return devices; // This is true beauty, seeing the data being successfully retreived. 😭
         }
 
-        // GET: api/GetDeviceByCategory/{Guid}
-        [HttpGet("GetNumberOfZones/{id}")]
+        // GET: api/GetNumberOfZones/{Guid}
+        [HttpGet("GetNumberOfZones/id")]
         public async Task<int> GetNumberOfZones(Guid id)
         {
             if (_context.Zones == null || _context.Categories == null)
             {
                 return 0;
             }
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
+            if (!CategoryExists(id)) 
             {
                 return 0;
             }
+            var qr = (from d in _context.Devices
+                      join c in _context.Categories on d.CategoryId equals c.CategoryId
+                      join z in _context.Zones on d.ZoneId equals z.ZoneId
+                      where d.ZoneId == z.ZoneId
+                      && d.CategoryId == c.CategoryId
+                      && d.CategoryId == id
+                      group z by z.ZoneId into g
+                      select g.Key).Count(); // grab number of unique zones relating to a specific category id
+            return qr;
 
-            var categories = from z in _context.Zones
-                             join d in _context.Devices on z.ZoneId equals d.ZoneId
-                             join c in _context.Categories on d.CategoryId equals c.CategoryId
-                             where c.CategoryId == d.CategoryId
-                             &&  z.ZoneId == d.ZoneId
-                             select d;
-            return categories.Count(); // im going to cry. this is a million times better than SQL
         }
 
         private bool CategoryExists(Guid id)
