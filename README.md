@@ -19,20 +19,23 @@ Some examples:
 
 > https://32582625project2.azurewebsites.net/api/Categories
 > Returns:
-> [
->  {
->    "categoryId": "065c1253-1cc1-45ac-a5e4-013ab73110da",
->    "categoryName": "Smart Home",
->    "categoryDescription": "Smart Home system capable of internet connectivity and voice commands",
->    "dateCreated": "2022-09-07T10:44:15.263"
->  },
->  {
->    "categoryId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
->    "categoryName": "Smart Watches",
->    "categoryDescription": "Smart Watches with Mobile OS",
->    "dateCreated": "2022-09-07T08:33:42.727"
->  }
-> ]
+```json
+[
+  {
+    "categoryId": "065c1253-1cc1-45ac-a5e4-013ab73110da",
+    "categoryName": "Smart Home",
+    "categoryDescription": "Smart Home system capable of internet connectivity and voice commands",
+    "dateCreated": "2022-09-07T10:44:15.263"
+  },
+  {
+    "categoryId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "categoryName": "Smart Watches",
+    "categoryDescription": "Smart Watches with Mobile OS",
+    "dateCreated": "2022-09-07T08:33:42.727"
+  }
+ ]
+```
+> 
 
 > https://32582625project2.azurewebsites.net/api/Categories/3fa85f64-5717-4562-b3fc-2c963f66afa6
 > Returns:
