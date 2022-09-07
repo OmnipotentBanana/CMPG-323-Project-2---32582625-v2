@@ -23,3 +23,5 @@ https://www.freecodecamp.org/news/an-awesome-guide-on-how-to-build-restful-apis-
 https://www.youtube.com/watch?v=Fbf_ua2t6v4
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio
 https://www.redhat.com/en/topics/api/what-is-a-rest-api
+https://www.learnentityframeworkcore.com/dbset/querying-data
+https://docs.microsoft.com/en-us/ef/ef6/querying/
