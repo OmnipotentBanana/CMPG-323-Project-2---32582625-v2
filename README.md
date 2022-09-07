@@ -17,8 +17,8 @@ This request can be Categories, Devices and Zones
 These can be further refined to search for individual components by using the GUID lookup
 Some examples:
 
-> https://32582625project2.azurewebsites.net/api/Categories
-> Returns:
+https://32582625project2.azurewebsites.net/api/Categories
+Returns:
 ```json
 [
   {
@@ -35,16 +35,17 @@ Some examples:
   }
  ]
 ```
-> 
-
-> https://32582625project2.azurewebsites.net/api/Categories/3fa85f64-5717-4562-b3fc-2c963f66afa6
-> Returns:
-> {
->    "categoryId": "065c1253-1cc1-45ac-a5e4-013ab73110da",
->    "categoryName": "Smart Home",
->    "categoryDescription": "Smart Home system capable of internet connectivity and voice commands",
->    "dateCreated": "2022-09-07T10:44:15.263"
-> } 
+ 
+```json
+https://32582625project2.azurewebsites.net/api/Categories/3fa85f64-5717-4562-b3fc-2c963f66afa6
+ Returns:
+ {
+    "categoryId": "065c1253-1cc1-45ac-a5e4-013ab73110da",
+    "categoryName": "Smart Home",
+    "categoryDescription": "Smart Home system capable of internet connectivity and voice commands",
+    "dateCreated": "2022-09-07T10:44:15.263"
+ } 
+```
 
 ## Delete requests work differently and have to be handeled with Swagger, Postman or any other API tester.
 ## Swagger can be accessed with this url: https://32582625project2.azurewebsites.net/swagger/ where DELETE, POST and PUT requests can be handeled and tested with ease.
