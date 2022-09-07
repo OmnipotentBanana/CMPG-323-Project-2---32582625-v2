@@ -32,6 +32,7 @@ namespace _32582625_Project2.Controllers
             return await _context.Devices.ToListAsync();
         }
 
+      
         // GET: api/Devices/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Device>> GetDevice(Guid id)
@@ -51,7 +52,6 @@ namespace _32582625_Project2.Controllers
         }
 
         // PUT: api/Devices/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDevice(Guid id, Device device)
         {
@@ -82,7 +82,6 @@ namespace _32582625_Project2.Controllers
         }
 
         // POST: api/Devices
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Device>> PostDevice(Device device)
         {
@@ -130,7 +129,26 @@ namespace _32582625_Project2.Controllers
             return NoContent();
         }
 
-        private bool DeviceExists(Guid id)
+        [HttpGet("GetDeviceByZoneID/{id}")]
+        public async Task<IEnumerable<Device>> GetDeviceByZoneID(Guid id)
+        {
+            if (_context.Zones == null || _context.Devices == null)
+            {
+                return null;
+            }
+            var zone = await _context.Zones.FindAsync(id);
+            if (zone == null)
+            {
+                return null;
+            }
+            var devices = from d in _context.Devices
+                          where d.ZoneId.Equals(id)
+                          select d; // get devices by zone id
+
+            return devices;
+        }
+
+        private bool DeviceExists(Guid id) // Visual Studio just does this all for me -_-. pretty impressive though
         {
             return (_context.Devices?.Any(e => e.DeviceId == id)).GetValueOrDefault();
         }
