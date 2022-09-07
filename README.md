@@ -35,10 +35,9 @@ Returns:
   }
  ]
 ```
- 
-```json
 https://32582625project2.azurewebsites.net/api/Categories/3fa85f64-5717-4562-b3fc-2c963f66afa6
- Returns:
+Returns:
+```json
  {
     "categoryId": "065c1253-1cc1-45ac-a5e4-013ab73110da",
     "categoryName": "Smart Home",
