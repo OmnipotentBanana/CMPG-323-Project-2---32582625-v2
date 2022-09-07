@@ -33,7 +33,7 @@ namespace _32582625_Project2.Controllers
         }
 
       
-        // GET: api/Devices/5
+        // GET: api/Devices/{Guid}
         [HttpGet("{id}")]
         public async Task<ActionResult<Device>> GetDevice(Guid id)
         {
@@ -51,7 +51,7 @@ namespace _32582625_Project2.Controllers
             return device;
         }
 
-        // PUT: api/Devices/5
+        // PUT: api/Devices/{Guid}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDevice(Guid id, Device device)
         {
@@ -109,7 +109,7 @@ namespace _32582625_Project2.Controllers
             return CreatedAtAction("GetDevice", new { id = device.DeviceId }, device);
         }
 
-        // DELETE: api/Devices/5
+        // DELETE: api/Devices/{Guid}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDevice(Guid id)
         {
@@ -128,7 +128,7 @@ namespace _32582625_Project2.Controllers
 
             return NoContent();
         }
-
+        // GET: api/GetDeviceByZoneID/{Guid}
         [HttpGet("GetDeviceByZoneID/{id}")]
         public async Task<IEnumerable<Device>> GetDeviceByZoneID(Guid id)
         {
