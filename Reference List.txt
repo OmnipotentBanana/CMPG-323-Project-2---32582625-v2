@@ -11,3 +11,15 @@ https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-rest
 https://stackoverflow.com/questions/29903227/azure-api-app-swagger-is-not-available-from-portal
 https://social.msdn.microsoft.com/Forums/en-US/74e55a2a-599f-4845-87c6-c7fa7a54ed2c/create-from-openapi-specification-not-working?forum=azureapimgmt
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-6.0&tabs=visual-studio
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/authentication-and-authorization-in-aspnet-web-api
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/external-authentication-services#GOOGLE
+Given Word Guidance Documents- 18 August, 1 September
+https://docs.microsoft.com/en-us/security/benchmark/azure/baselines/api-management-security-baseline
+https://www.c-sharpcorner.com/article/simple-configuration-of-connection-string-through-key-vault2 < This didnt work :)
+https://social.msdn.microsoft.com/Forums/sqlserver/en-US/60cf9602-caf7-4320-a6a5-9f2e4cfb01ea/how-to-insert-connectionstring-into-a-key-vault?forum=AzureDataFactory
+https://www.connectionstrings.com/store-and-read-connection-string-in-appsettings-json/ < semi relevant
+https://stackoverflow.com/questions/45796776/get-connectionstring-from-appsettings-json-instead-of-being-hardcoded-in-net-co < wasnt relevant to .net 6
+https://www.freecodecamp.org/news/an-awesome-guide-on-how-to-build-restful-apis-with-asp-net-core-87b818123e28/
+https://www.youtube.com/watch?v=Fbf_ua2t6v4
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio
+https://www.redhat.com/en/topics/api/what-is-a-rest-api

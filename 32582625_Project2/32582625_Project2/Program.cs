@@ -1,6 +1,9 @@
 using _32582625_Project2.Controllers;
 using _32582625_Project2.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<CMPG323_Project2Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("connectionString"))
+    options.UseSqlServer(builder.Configuration.GetConnectionString("connectionString")) // dependency injection
 );
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -27,6 +30,7 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();
