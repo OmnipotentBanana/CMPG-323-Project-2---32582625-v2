@@ -1,0 +1,13 @@
+https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio
+https://stackoverflow.com/questions/35423364/asp-net-5-and-ef7-existing-azure-database-scaffolding
+https://stackoverflow.com/questions/62658026/cannot-scaffold-dbcontext-using-my-local-azure-ad-credentials
+https://stackoverflow.com/questions/71597600/scaffold-dbcontext-sql-database-views-asp-net-core-6
+https://social.msdn.microsoft.com/Forums/sqlserver/en-US/755f96f5-f162-4092-a86c-17caa6d602b6/how-to-connect-azure-sql-db-with-net-entityframework-core?forum=ssdsgetstarted
+https://www.connectionstrings.com/azure-sql-database/
+https://stackoverflow.com/questions/30007134/sql-connection-string-provider-name
+https://visualstudio.microsoft.com/downloads/
+https://www.coveros.com/including-swagger-docs-into-your-devops-pipeline/
+https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-rest-api
+https://stackoverflow.com/questions/29903227/azure-api-app-swagger-is-not-available-from-portal
+https://social.msdn.microsoft.com/Forums/en-US/74e55a2a-599f-4845-87c6-c7fa7a54ed2c/create-from-openapi-specification-not-working?forum=azureapimgmt
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-6.0&tabs=visual-studio
