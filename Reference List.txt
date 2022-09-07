@@ -25,3 +25,5 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnet
 https://www.redhat.com/en/topics/api/what-is-a-rest-api
 https://www.learnentityframeworkcore.com/dbset/querying-data
 https://docs.microsoft.com/en-us/ef/ef6/querying/
+https://stackoverflow.com/questions/21051612/entity-framework-join-3-tables
+https://stackoverflow.com/questions/71043307/find-in-entity-framework-multiple-or-parameters

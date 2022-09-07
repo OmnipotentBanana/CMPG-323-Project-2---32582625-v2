@@ -64,7 +64,12 @@ Returns:
   }
 ]
 ```
+https://32582625project2.azurewebsites.net/api/Categories/GetNumberOfZones/065c1253-1cc1-45ac-a5e4-013ab73110da 
+Returns:
 
+```json
+  1
+```
 
 ## Delete requests work differently and have to be handeled with Swagger, Postman or any other API tester to send a request body to be formatted correctly with the input parameters.
 ## Swagger can be accessed with this url: https://32582625project2.azurewebsites.net/swagger/ where DELETE, POST and PUT requests can be handeled and tested with ease.
