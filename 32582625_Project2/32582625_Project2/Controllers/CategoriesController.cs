@@ -15,7 +15,6 @@ namespace _32582625_Project2.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        //private string connectionString = "@Microsoft.Keyvault(SecretUri=https://project2vault.vault.azure.net/secrets/Project2Secret/648fe121285c42ca96ba7e978f40cd23)";
         private readonly CMPG323_Project2Context _context;
 
         public CategoriesController(CMPG323_Project2Context context)
@@ -27,21 +26,15 @@ namespace _32582625_Project2.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
-            //Category newCategory = new Category();
-            //newCategory.CategoryId = new Guid();
-            //newCategory.CategoryName = "Test";
-            //newCategory.CategoryDescription = "Test";
-            //newCategory.DateCreated = DateTime.Now;
-            //_context.Categories.Add(newCategory);
             if (_context.Categories == null)
             {
                 return NotFound();
             }
-            return Ok(await _context.Categories.ToListAsync());
+            return await _context.Categories.ToListAsync();
 
         }
 
-        // GET: api/Categories/5
+        // GET: api/Categories/{Guid}
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> GetCategory(Guid id)
         {
@@ -59,8 +52,7 @@ namespace _32582625_Project2.Controllers
             return category;
         }
 
-        // PUT: api/Categories/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT: api/Categories/{Guid}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCategory(Guid id, Category category)
         {
@@ -91,7 +83,6 @@ namespace _32582625_Project2.Controllers
         }
 
         // POST: api/Categories
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Category>> PostCategory(Category category)
         {
@@ -119,7 +110,7 @@ namespace _32582625_Project2.Controllers
             return CreatedAtAction("GetCategory", new { id = category.CategoryId }, category);
         }
 
-        // DELETE: api/Categories/5
+        // DELETE: api/Categories/{Guid}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(Guid id)
         {
@@ -137,6 +128,27 @@ namespace _32582625_Project2.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+
+        // GET: api/GetDeviceByCategory/{Guid}
+        [HttpGet("GetDeviceByCategory/{id}")]
+        public async Task<IEnumerable<Device>> GetDeviceByCategoryID(Guid id)
+        {
+            if (_context.Devices == null || _context.Categories == null)
+            {
+                return null;
+            }
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
+            {
+                return null;
+            }
+            var devices = from d in _context.Devices
+                          where d.CategoryId.Equals(id)
+                          select d; // get devices by category id
+            
+            return devices; // This is true beauty, seeing the data being successfully retreived. 😭
         }
 
         private bool CategoryExists(Guid id)

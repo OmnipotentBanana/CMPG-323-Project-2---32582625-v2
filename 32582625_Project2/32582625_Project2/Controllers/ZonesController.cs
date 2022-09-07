@@ -32,7 +32,7 @@ namespace _32582625_Project2.Controllers
             return await _context.Zones.ToListAsync();
         }
 
-        // GET: api/Zones/5
+        // GET: api/Zones/{Guid}
         [HttpGet("{id}")]
         public async Task<ActionResult<Zone>> GetZone(Guid id)
         {
@@ -50,7 +50,7 @@ namespace _32582625_Project2.Controllers
             return zone;
         }
 
-        // PUT: api/Zones/5
+        // PUT: api/Zones/{Guid}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutZone(Guid id, Zone zone)
         {
@@ -108,7 +108,7 @@ namespace _32582625_Project2.Controllers
             return CreatedAtAction("GetZone", new { id = zone.ZoneId }, zone);
         }
 
-        // DELETE: api/Zones/5
+        // DELETE: api/Zones/{Guid}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteZone(Guid id)
         {

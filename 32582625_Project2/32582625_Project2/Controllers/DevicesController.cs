@@ -128,8 +128,8 @@ namespace _32582625_Project2.Controllers
 
             return NoContent();
         }
-        // GET: api/GetDeviceByZoneID/{Guid}
-        [HttpGet("GetDeviceByZoneID/{id}")]
+        // GET: api/GetDeviceByZone/{Guid}
+        [HttpGet("GetDeviceByZone/{id}")]
         public async Task<IEnumerable<Device>> GetDeviceByZoneID(Guid id)
         {
             if (_context.Zones == null || _context.Devices == null)
