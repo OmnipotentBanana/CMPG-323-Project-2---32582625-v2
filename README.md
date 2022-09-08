@@ -3,9 +3,7 @@
 ## *This is my 3rd revision of my Project 2 repository. In the previous 2 repositories, I accidentally forgot to add the debug folders into the .gitignore leading to me leaking my passwords through the commit history. I deleted the first repository in panic and did not read the Rubric. I only followed the project 2 brief and did not see any indication of a requirement of a 7 day old commit. My apologies.*
 Azure SQLServer DB Credentials: 
 
-Username: OmnipotentBanana
-
-Password: !D$pHx*68FRf%K
+email me if needed: juanmyburg@gmail.com
 
 ##
 # How stakeholders will use the API service
