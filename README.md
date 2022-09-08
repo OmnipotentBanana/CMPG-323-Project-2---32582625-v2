@@ -3,7 +3,9 @@
 ## *This is my 3rd revision of my Project 2 repository. In the previous 2 repositories, I accidentally forgot to add the debug folders into the .gitignore leading to me leaking my passwords through the commit history. I deleted the first repository in panic and did not read the Rubric. I only followed the project 2 brief and did not see any indication of a requirement of a 7 day old commit. My apologies.*
 
 ## *Reference List is uploaded to this repository under **Reference List.txt***
+
 *Also using .net 6 allowed me to bypass the API configuration of swagger, thus not appearing in the Azure API Management service*
+
 # How to use this API
 
 Select any way to test and use the API through the indicated buttons. (GET, POST, PUT, DELETE)
@@ -14,6 +16,7 @@ Select any way to test and use the API through the indicated buttons. (GET, POST
 
 
 The API is accessed by **https://32582625project2.azurewebsites.net/api/{request}/{id}**
+*sidenote: I did not know you could use the API Management Service's Base URL to handle requests. I just used my App Service to handle all my Swagger and API requests.**https://apim-cmpg323pr2.azure-api.net** is the APIM Base URL and can be used instead of the project2.azurewebsites url :)*
 
 This request can be Categories, Devices and Zones
 These can be further refined to search for individual components by using the GUID lookup
