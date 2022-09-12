@@ -98,4 +98,5 @@ Returns:
 > - /api/Devices/GetDeviceByZone/{id}
 
 
-[!alttext](apim-1.jpg?raw=true "apim-1")
+[!alttext](https://github.com/OmnipotentBanana/CMPG-323-Project-2---32582625-v2/blob/main/apim-1.png)
+[!alttext](https://github.com/OmnipotentBanana/CMPG-323-Project-2---32582625-v2/blob/main/apim-2.png)
