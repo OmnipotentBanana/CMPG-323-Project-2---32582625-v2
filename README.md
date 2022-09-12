@@ -96,3 +96,6 @@ Returns:
 > - /api/Categories/GetDeviceByCategory/{id}
 > - /api/Categories/GetNumberOfZones/{id}
 > - /api/Devices/GetDeviceByZone/{id}
+
+
+[!alttext](apim-1.jpg?raw=true "apim-1")
